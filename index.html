@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 	<style>
 	#map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
 	</style>
@@ -9,5 +11,13 @@
     <h3>Corona Virus Map</h3>
     <!--The div element for the map -->
     <div id="map"></div>
+	<script>
+		var map = L.map('map').setView([0,0],1);
+		
+		var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+	</script>
   </body>
 </html>
