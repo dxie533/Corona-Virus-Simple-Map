@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="jquery.csv.min.js"></script>
+	<script src="js/jquery.csv.min.js"></script>
 	</script>
 	<style>
 	#map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
@@ -22,23 +22,8 @@
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 	</script>
-	<script>
-	$(document).ready(function(){
-	// WAIT FOR DOC TO FINISH LOADING
-	$.ajax({
-    url: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv",
-    success: function (data) {
-        var arr = $.csv.toArrays(data);
-        somefunction(arr);
-    },
-    dataType: "text",
-    });
-
-	function somefunction(arr) {
-    alert("wow");
-    }
-	
-	}); 
+	<script type = "text/javascript" src = "js/loadData.js">
 	</script>
+
   </body>
 </html>
