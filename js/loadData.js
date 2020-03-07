@@ -58,7 +58,7 @@ function addCircles(){
 			color: 'red',
 			fillColor: '#f03',
 			fillOpacity: 0.25,
-			radius: circleInfected * 5
+			radius: 200 - (-1 *circleInfected),
 		})
 		//CHECK IF CITY NAME IS AVAILABLE AND CHANGE THE TOOLTIP TEXT ACCORDINGLY
 		if(name){

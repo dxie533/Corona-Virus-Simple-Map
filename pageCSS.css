@@ -1,11 +1,16 @@
 #map{
-	height:80vh;
-	}
-	h3{
-	color:orange;
+height:80vh;
+}
+h3{
+color:orange;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+text-align:center;
+}
+body{
+background-color:grey;
+}
+.leaflet-tooltip {
+    padding: 0px 4px 0px 4px;
+	font-size:16pt;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	text-align:center;
-	}
-	body{
-	background-color:grey;
-	}
+}
