@@ -6,16 +6,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/jquery.csv.min.js"></script>
 	</script>
-	<style>
-	#map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
-	</style>
+	<link rel="stylesheet" type="text/css" href="pageCSS.css">
   </head>
   <body>
     <h3>Corona Virus Map</h3>
     <!--The div element for the map -->
     <div id="map"></div>
 	<script>
-		var map = L.map('map').setView([0,0],1);
+		//var map = L.map('map').setView([0,0],1);
+		var map = L.map('map').locate({setView: true, maxZoom: 10});
 		
 		var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
