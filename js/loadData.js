@@ -62,7 +62,12 @@ function addCircles(){
 		})
 		//CHECK IF CITY NAME IS AVAILABLE AND CHANGE THE TOOLTIP TEXT ACCORDINGLY
 		if(name){
-			circle.bindTooltip(name + ", " + countryName + "<br/>" + "Confirmed cases : " + circleInfected + "<br/>" + "Deaths: " + circleDead).addTo(map);
+			if(circleInfected == 0){
+				circle.bindTooltip(name + ", " + countryName).addTo(map);
+			}
+			else{
+				circle.bindTooltip(name + ", " + countryName + "<br/>" + "Confirmed cases : " + circleInfected + "<br/>" + "Deaths: " + circleDead).addTo(map);
+			}
 		}
 		else{
 			circle.bindTooltip(countryName + "<br/>" + "Confirmed cases : " + circleInfected + "<br/>" + "Deaths: " + circleDead).addTo(map);
